@@ -26,6 +26,7 @@ const reducer = (state, action) => {
         if (cartItem.id === action.payload) {
           return { ...cartItem, amount: cartItem.amount - 1 };
         }
+
         return cartItem;
       })
       .filter((cartItem) => cartItem.amount !== 0);
